@@ -1,6 +1,6 @@
 # introsde-2016-assignment-3-client
 
-This client calls the server: **https://github.com/DavideLissoni/introsde-2016-assignment-3-server**
+This client calls the server: **https://github.com/ddellagiacoma/introsde-2016-assignment-3-server**
 
 ## IMPLEMENTATION
 The client is divided in the following packages and classes:
