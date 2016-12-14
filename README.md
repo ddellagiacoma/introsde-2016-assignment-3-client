@@ -23,7 +23,7 @@ Moreover, it prints into **client-server.log** file the server WSDL url and, for
 
 The client can be easily tested copying the repository in local
 ```sh
-git clone https://github.com/DanieleDellagiacoma/introsde-2016-assignment-3-client
+git clone https://github.com/ddellagiacoma/introsde-2016-assignment-3-client
 ```
 
 And execute it
