@@ -1,0 +1,70 @@
+WSDL Document Location: http://192.168.56.1:6902/ws/people?wsdl
+
+Method #1: readPersonList()
+Result ==> OK
+IdPerson: 1 Firstname: Daniele Lastname: Norris Birthdate: 1945-01-01T00:00:00+01:00
+IdMeasure: 2202 MeasureName: height Value: 170
+IdMeasure: 2203 MeasureName: steps Value: 1000
+IdMeasure: 4306 MeasureName: weight Value: 47
+
+IdPerson: 2 Firstname: Pallino Lastname: Pinco Birthdate: 1982-06-08T00:00:00+02:00
+IdMeasure: 352 MeasureName: weight Value: 86
+
+IdPerson: 3 Firstname: Pappo Lastname: Pippo Birthdate: 1960-04-09T00:00:00+01:00
+IdMeasure: 50 MeasureName: weight Value: 72.3
+
+IdPerson: 4 Firstname: Albert Lastname: Einstein Birthdate: 1987-11-17T12:14:00+01:00
+
+
+Method #2: readPerson(1)
+Result ==> OK
+IdPerson: 1 Firstname: Daniele Lastname: Norris Birthdate: 1945-01-01T00:00:00+01:00
+IdMeasure: 2202 MeasureName: height Value: 170
+IdMeasure: 2203 MeasureName: steps Value: 1000
+IdMeasure: 4306 MeasureName: weight Value: 47
+
+
+Method #3: updatePerson(Person(Albert,Einstein,1987-11-17))
+Result ==> OK
+IdPerson: 4 Firstname: Albert Lastname: Einstein Birthdate: 1987-11-17T12:14:00+01:00
+
+
+Method #4: createPerson(Person(Michael,Jordan,1980-10-15))
+Result ==> OK
+IdPerson: 3005 Firstname: Michael Lastname: Jordan Birthdate: 1980-10-15T12:14:00+01:00
+
+
+Method #5: deletePerson(3005)
+Result ==> OK
+
+
+Method #6: readPersonHistory(2, "weight")
+Result ==> OK
+IdMeasureHistory: 5 Value: 80 Timestamp: 2014-12-11T16:04:44+01:00
+IdMeasureHistory: 6 Value: 75 Timestamp: 2015-12-11T16:04:53+01:00
+IdMeasureHistory: 7 Value: 78 Timestamp: 2016-12-11T16:05:44+01:00
+
+
+Method #7: readMeasureTypes()
+Result ==> OK
+IdMeasureDef: 1 MeasureName: weight MeasureType: double
+IdMeasureDef: 2 MeasureName: height MeasureType: double
+IdMeasureDef: 3 MeasureName: steps MeasureType: integer
+IdMeasureDef: 4 MeasureName: bloodpressure MeasureType: double
+IdMeasureDef: 5 MeasureName: heartrate MeasureType: integer
+IdMeasureDef: 6 MeasureName: bmi MeasureType: double
+
+
+Method #8: readPersonMeasure(1, "weight", 1)
+Result ==> OK
+IdMeasure: 1 Value: 83 Timestamp: 2012-12-27T23:00:00+01:00
+
+
+Method #9: savePersonMeasure(1, HealthProfile(weight,89))
+Result ==> OK
+IdMeasure: 4357 MeasureDef: weight Value: 89
+
+
+Method #10: updatePersonMeasure(1, HealthProfile(weight,47))
+Result ==> OK
+IdMeasure: 4357 MeasureDef: weight Value: 47
